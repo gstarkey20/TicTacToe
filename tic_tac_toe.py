@@ -6,18 +6,30 @@ Allows a user to play a complete game of TicTacToe.
 
 """
 
-class TicTacToe:
 	
-	# creating a board
-	board = [["_" for _ in range(3)] for _ in range(3)]
+# creating a board
+board = [["_" for _ in range(3)] for _ in range(3)]
+         
+# printing the board to the console
+def printBoard(board):
+	[print(row) for row in board]	
+printBoard(board)
 
-	# prints a board to the console, utilizing list comprehension
-	def print_board(board):
-		[print(row) for row in board]	
-	print_board(board)
-		
+def game():
+	turn = 'X'
+	count = 0
 
-	#TODO determine whose turn it is
+	for i in range(10):
+		printBoard(board)
+		print("It's your turn " + turn + ", where would you like to place?")
+
+		move = int(input())
+
+		if board[move] == ' ':
+ 			board[move] = turn
+		else:
+			print("That spot is already taken.\nTry again")
+game() 	
 
 	#TODO determine a winner
 
