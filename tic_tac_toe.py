@@ -15,6 +15,7 @@ def printBoard(board):
 	[print(row) for row in board]	
 printBoard(board)
 
+# logic behind the game, placing the X or O on the board
 def game():
 	turn = 'X'
 	count = 0
